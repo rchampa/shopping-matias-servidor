@@ -1,5 +1,6 @@
  <?php
 
+    header('Content-Type: application/json; charset=utf-8');
     //0: login correcto
     //1: login incorrecto
     //2: faltan datos
@@ -16,7 +17,9 @@
         mysql_query("SET NAMES utf8");
 
         $sentencia = mysql_query("SELECT * FROM usuarios WHERE email_usuario='{$emailUsuario}' AND clave='{$claveUsuario}'");
-        $numeroFilas = mysql_num_rows($sentencia);
+        $numeroFilas = 0;
+        if($sentencia)
+            $numeroFilas = mysql_num_rows($sentencia);
 
 
         
