@@ -20,5 +20,12 @@ CREATE TABLE IF NOT EXISTS `tiendas` (
   `longitud` varchar(100) NOT NULL,
   `latitud` varchar(100) NOT NULL,
   `imagen` varchar(250) NOT NULL,
+  `tipo` int(2) NOT NULL,
   PRIMARY KEY (`id`)
+);
+
+create table tipo_tiendas
+(
+    id_tipo int(2) auto_increment primary key,
+    nombre varchar(50)
 );

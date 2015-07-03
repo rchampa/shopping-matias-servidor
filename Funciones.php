@@ -40,14 +40,23 @@ class Funciones {
         
     }
     
-    
-    public function listaPersonas(){
+    public function listaTipoTiendas(){
 
-        $sql = $this->con->prepare("SELECT * FROM personas");
+        $sql = $this->con->prepare("SELECT * FROM tipo_tiendas");
         $sql->execute();
         $lista_personas = $sql->fetchAll();
         
-        return json_encode($lista_personas);
+        return $lista_personas;
+        
+    }
+    
+    public function listaTiendas(){
+
+        $sql = $this->con->prepare("SELECT * FROM tiendas");
+        $sql->execute();
+        $lista_personas = $sql->fetchAll();
+        
+        return $lista_personas;
         
     }
     

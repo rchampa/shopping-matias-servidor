@@ -17,7 +17,7 @@
         $respuesta = array("codigo"=>2,"mensaje"=>"Faltan datos");
      }
 
-     echo json_encode($respuesta);
+     echo json_encode(array($respuesta));
     
  ?>
 
