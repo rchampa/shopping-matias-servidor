@@ -12,8 +12,6 @@
         $objeto_persona = new Funciones();
         $respuesta = $objeto_persona->login($emailUsuario, $claveUsuario);
 
-
-        mysql_close($link);
      }
      else{
         $respuesta = array("codigo"=>2,"mensaje"=>"Faltan datos");
